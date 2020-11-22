@@ -1,9 +1,12 @@
 # IMPORT
 import utils
 import operations
+from bank_account_variables import money_slips
+from file import load_bank_data
 
 
 def main():
+    load_bank_data()
     utils.header()  # Imprimindo o header do programa
     account_auth = operations.auth_account()  # Autenticando no caixa eletrônico
 

@@ -1,4 +1,5 @@
 from bank_account_variables import account_list, money_slips
+from file import save_money_slips
 import getpass
 
 
@@ -45,8 +46,9 @@ def withdraw():
     else:
         for money_bill in money_slips_user:
             money_slips_user[money_bill] -= money_slips_user[money_bill]
-            print('Pegue as notas: ')
-            print(money_slips_user)
+        save_money_slips()
+        print('Pegue as notas: ')
+        print(money_slips_user)
 
 
 def auth_account():

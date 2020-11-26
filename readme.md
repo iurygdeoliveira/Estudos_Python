@@ -13,5 +13,6 @@ Programas em Python (Python Programs)
 ## Sumário dos Programas (Summary of programs)
 
 - [CAIXA ELETRÔNICO](https://github.com/iurygdeoliveira/Estudos_Python/tree/master/01%20-%20Caixa%20Eletr%C3%B4nico) (21/11/2021)
-- [JUPYTER NOTEBOOK]
-- [GAME BREAKOUT]
+- [JUPYTER NOTEBOOK](https://github.com/iurygdeoliveira/Estudos_Python/tree/master/03%20-%20Jupyter%20Notebook) (26/11/2021)
+- [GAME BREAKOUT](https://github.com/iurygdeoliveira/Estudos_Python/tree/master/04%20-%20Game%20Breakout) (27/11/2021)
+- [CALCULADORA]

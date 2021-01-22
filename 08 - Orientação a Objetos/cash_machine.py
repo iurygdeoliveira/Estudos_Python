@@ -12,6 +12,19 @@ class BankAccount:
     def check_password(self, password):
         return password == self.password
 
+    def balance_debit(self, value):
+        self.value -= value
+
+
+class CashMachineWithDraw:
+    @staticmethod
+    def WithDraw(bank_account, value):
+        cash_machine = CashMachine({'20': 5, '50': 5, '100': 5})
+        money_slips_user = cash_machine.WithDraw(value)
+        if money_slips_user:
+            bank_account.balance_debit(value)
+        return cash_machine
+
 
 class CashMachine:
     def __init__(self, money_slips):
@@ -19,18 +32,16 @@ class CashMachine:
         self.money_slips_user = {}
         self.value_remaining = 0
 
+    def WithDraw(self, value):
+        self.value_remaining = value
+        self.__calculate_money_slips_user('100')
+        self.__calculate_money_slips_user('50')
+        self.__calculate_money_slips_user('20')
 
-def WithDraw(self, value):
-    self.value_remaining = value
+        if self.value_remaining == 0:
+            self.__decrease_money_slips()
 
-    self.__calculate_money_slips_user('100')
-    self.__calculate_money_slips_user('50')
-    self.__calculate_money_slips_user('20')
-
-    if self.value_remaining == 0:
-        self.__decrease_money_slips()
-
-    return False if self.value_remaining != 0 else self.money_slips
+        return False if self.value_remaining != 0 else self.money_slips
 
     def __calculate_money_slips_user(self, money_bill):
         money_bill_int = int(money_bill)

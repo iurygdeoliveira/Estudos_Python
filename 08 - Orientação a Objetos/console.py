@@ -1,14 +1,39 @@
 # 1 - Saldo, 2 - Saque, 10 - inserir células
 class CashMachineConsole:
 
-    # Definindo o método como estático
+    # Obtendo escolha do usuário
+    @staticmethod
+    def call_operation():
+        option_typed = CashMachineConsole.get_menu_options_typed()
+        CashMachineOperation.do_operation(option_typed)
+
+    # Disponibilizando opções de escolha ao usuário
     @staticmethod
     def get_menu_options_typed():
         print("1 - Saldo")
         print("2 - Saque")
         return input('Escolha uma das opções acima: ')
 
+
+class CashMachineOperation:
+
     @staticmethod
-    def call_operation():
-        option_typed = CashMachineConsole.get_menu_options_typed()
-        # escolho a operação
+    def do_operation(option):
+        if option == '1':
+            ShowBalanceOperation.do_operation()
+        elif option == '2':
+            WithDrawOperation.do_operation()
+
+
+class ShowBalanceOperation:
+
+    @staticmethod
+    def do_operation():
+        print('Mostrar saldo')
+
+
+class WithDrawOperation:
+
+    @staticmethod
+    def do_operation():
+        print('Sacar Dinheiro')

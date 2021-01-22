@@ -6,6 +6,12 @@ class BankAccount:
         self.value = value
         self.admin = admin
 
+    def check_account_number(self, account_number):
+        return account_number == self.account_number
+
+    def check_password(self, password):
+        return password == self.password
+
 
 accounts_list = [
     BankAccount('0001-02', 'Fulano da Silva', '123456', 100, False),

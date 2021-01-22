@@ -44,7 +44,8 @@ class ShowBalanceOperation:
 
     @staticmethod
     def do_operation():
-        print('Mostrar saldo')
+        bank_account = AuthBankAccount.bank_account_authenticated
+        print('O seu saldo é %s' % bank_account.value)
 
 
 class WithDrawOperation:

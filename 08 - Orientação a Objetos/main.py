@@ -1,11 +1,13 @@
+from console import CashMachineConsole
 from utils import clear, header
 
 
 def main():
     clear()
+
     header()
 
-    # Lógica do caixa eletronico
+    CashMachineConsole.call_operation()
 
 
 # Verificando se o nome do arquivo é igual a main

@@ -1,4 +1,17 @@
-# 1 - Saldo, 2 - Saque, 10 - inserir células
+from auth import AuthBankAccount
+import getpass
+
+
+class AuthBankAccountConsole:
+
+    @staticmethod
+    def is_auth():
+        account_number_typed = input('Digite sua conta: ')
+        password_typed = getpass.getpass('Digite sua senha: ')
+
+        AuthBankAccount.authenticate(account_number_typed, password_typed)
+
+
 class CashMachineConsole:
 
     # Obtendo escolha do usuário

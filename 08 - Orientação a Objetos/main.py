@@ -1,13 +1,12 @@
-from console import CashMachineConsole
+from console import CashMachineConsole, AuthBankAccountConsole
 from utils import clear, header
 
 
 def main():
-    clear()
-
-    header()
-
-    CashMachineConsole.call_operation()
+    clear()  # Limpando a tela
+    header()  # Imprimindo cabeçalho
+    AuthBankAccountConsole.is_auth()
+    # CashMachineConsole.call_operation()
 
 
 # Verificando se o nome do arquivo é igual a main

@@ -16,6 +16,14 @@ class BankAccount:
         self.value -= value
 
 
+class CashMachineInsertMoneyBill:
+    @staticmethod
+    def insert_money_bill(money_bill, amount):
+        cash_machine = CashMachine({'20': 5, '50': 5, '100': 5})
+        cash_machine.money_slips[money_bill] += amount
+        return cash_machine
+
+
 class CashMachineWithDraw:
     @staticmethod
     def WithDraw(bank_account, value):

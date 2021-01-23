@@ -1,3 +1,6 @@
+from file import MoneySlipsFileReader
+
+
 class BankAccount:
     def __init__(self, account_number, name, password, value, admin):
         self.account_number = account_number
@@ -19,7 +22,7 @@ class BankAccount:
 class CashMachineInsertMoneyBill:
     @staticmethod
     def insert_money_bill(money_bill, amount):
-        cash_machine = CashMachine({'20': 5, '50': 5, '100': 5})
+        cash_machine = CashMachineGetter().get()
         cash_machine.money_slips[money_bill] += amount
         return cash_machine
 
@@ -27,11 +30,18 @@ class CashMachineInsertMoneyBill:
 class CashMachineWithDraw:
     @staticmethod
     def WithDraw(bank_account, value):
-        cash_machine = CashMachine({'20': 5, '50': 5, '100': 5})
+
+        cash_machine = CashMachineGetter().get()
         money_slips_user = cash_machine.WithDraw(value)
         if money_slips_user:
             bank_account.balance_debit(value)
         return cash_machine
+
+
+class CashMachineGetter:
+    def get(self):
+        money_slips = MoneySlipsFileReader().get_money_slips()
+        return CashMachine(money_slips)
 
 
 class CashMachine:

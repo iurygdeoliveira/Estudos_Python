@@ -1,4 +1,4 @@
-from file import MoneySlipsFileReader
+from file import MoneySlipsFileReader, MoneySlipsFileWriter
 
 
 class BankAccount:
@@ -24,6 +24,7 @@ class CashMachineInsertMoneyBill:
     def insert_money_bill(money_bill, amount):
         cash_machine = CashMachineGetter().get()
         cash_machine.money_slips[money_bill] += amount
+        MoneySlipsFileWriter().write_money_slips(cash_machine.money_slips)
         return cash_machine
 
 
@@ -35,6 +36,7 @@ class CashMachineWithDraw:
         money_slips_user = cash_machine.WithDraw(value)
         if money_slips_user:
             bank_account.balance_debit(value)
+            MoneySlipsFileWriter().write_money_slips(cash_machine.money_slips)
         return cash_machine
 
 

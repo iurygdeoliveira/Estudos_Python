@@ -12,7 +12,11 @@ class Bankfile:
         return open(Bankfile.BASE_PATH + '/_bank_file.dat', mode)
 
 
-class MoneySlipsFileReader(Bankfile):
+class MoneySlipsFile(Bankfile):
+    MONEY_SLIPS_LINE = 0
+
+
+class MoneySlipsFileReader(MoneySlipsFile):
 
     BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 
@@ -22,7 +26,7 @@ class MoneySlipsFileReader(Bankfile):
 
     def get_money_slips(self):
         self._file = self._open_file_bank('r')
-        line_to_read = 0
+        line_to_read = MoneySlipsFile.MONEY_SLIPS_LINE
         line = self._file.readlines(line_to_read)[0]
         while self.__has_semicolon(line):
             semicolon_pos = line.find(';')
@@ -49,11 +53,12 @@ class MoneySlipsFileReader(Bankfile):
         self.__money_slips[money_bill] = int(value)
 
 
-class MoneySlipsFileWriter(Bankfile):
+class MoneySlipsFileWriter(MoneySlipsFile):
 
     def write_money_slips(self, money_slips):
         lines = self.__readlines()
-        lines[0] = self.__format_line_to_write(money_slips)
+        line_to_write = MoneySlipsFile.MONEY_SLIPS_LINE
+        lines[line_to_write] = self.__format_line_to_write(money_slips)
         self.__writelines(lines)
 
     def __readlines(self):

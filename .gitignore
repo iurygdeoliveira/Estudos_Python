@@ -1,3 +1,4 @@
 .mypy_cache
 .vscode
 docker/mysql
+09 - Banco de Dados/mongodb/.ipynb_checkpoints

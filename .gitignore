@@ -1,7 +1,11 @@
 .mypy_cache
 .vscode
+.gitignore
 docker/mysql
-09 - Banco de Dados/mongodb/.ipynb_checkpoints
-11 - Mini-projetos/Comportamento de Compra de Consumidores/.ipynb_checkpoints
-06 - Modulos e Pacotes/.ipynb_checkpoints
-10 - Machine Learning
+09 - Banco\ de\ Dados/mongodb/.ipynb_checkpoints
+06 - Modulos\ e\ Pacotes/.ipynb_checkpoints
+10 - Analise\ Exploratoria\ de\ dados/dataset
+10 - Analise\ Exploratoria\ de\ dados/Analise\ Exploratoria\ de\ Dados.ipynb
+10 - Analise\ Exploratoria\ de\ dados/Pizza.ipynb
+10 - Analise\ Exploratoria\ de\ dados/Mini-Projeto\ -\ Analise1.ipynb
+10 - Analise Exploratoria de dados/.ipynb_checkpoints

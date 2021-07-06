@@ -1,0 +1,16 @@
+15 1
+Ensolarado Quente Alta Fraco nao
+Ensolarado Quente Alta Forte nao
+Nublado Quente Alta Fraco sim
+Chuvoso Interm Alta Fraco sim
+Chuvoso Fria Normal Fraco sim
+Chuvoso Fria Normal Forte nao
+Nublado Fria Normal Forte sim
+Ensolarado Interm Alta Fraco nao
+Ensolarado Fria Normal Fraco sim
+Chuvoso Interm Normal Fraco sim
+Ensolarado Interm Normal Forte sim
+Nublado Interm Alta Forte sim
+Nublado Quente Normal Fraco sim
+Chuvoso Interm Alta Forte nao
+Chuvoso Fria Alta Fraco

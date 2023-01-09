@@ -6,6 +6,9 @@ docker/mysql
 06 - Modulos\ e\ Pacotes/.ipynb_checkpoints
 10 - Analise\ Exploratoria\ de\ dados/dataset
 10 - Analise Exploratoria de dados/.ipynb_checkpoints
+10 - Analise Exploratoria de dados/downloads
+10 - Analise Exploratoria de dados/imdb.db
+10 - Analise Exploratoria de dados/imdb.db-journal
 11 - Machine Learning/Mini-Projeto1/.ipynb_checkpoints
 12 - Deep Learning/projeto1/.ipynb_checkpoints
 12 - Deep Learning/projeto1/modulos/__pycache__
@@ -17,3 +20,5 @@ docker/mysql
 11 - Machine Learning/.ipynb_checkpoints
 11 - Machine Learning/KNN/.ipynb_checkpoints
 11 - Machine Learning/Trabalho - KNN/.ipynb_checkpoints
+15 - Visualização de Dados/Evento Reestruture/.ipynb_checkpoints
+15 - Visualização de Dados/datasets
